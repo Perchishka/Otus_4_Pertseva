@@ -18,7 +18,7 @@ describe("kolobok test suite", () => {
         expect(() => homework.kolobok("дед мороз").toThrow());
     });
     test("case 123", () => {
-        expect(()=>homework.kolobok(123).toThrow("Неизвестный персонаж 123"));
+        expect(()=>homework.kolobok(123)).toThrow("Неизвестный персонаж 123");
     });
 
 });
@@ -27,8 +27,11 @@ describe("newYear test suite", () => {
     test("case Снегурочка", () => {
         expect(homework.newYear("Снегурочка")).toBe("Снегурочка! Снегурочка! Снегурочка!");
     });
-    test("case Дед мороз", () => {
+    test("case Дед Мороз", () => {
         expect(homework.newYear("Дед Мороз")).toBe("Дед Мороз! Дед Мороз! Дед Мороз!");
+    });
+    test("case Baba Yaga", () => {
+        expect(homework.newYear("Baba Yaga")).toBe("Неизвестный персонаж: Baba Yaga");
     });
     test("case 123", () => {
         expect(homework.newYear(123)).not.toBe(String);

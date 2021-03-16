@@ -19,7 +19,15 @@ function kolobok(name) {
 }
 
 function newYear(heroName) {
-  return `${heroName}! ${heroName}! ${heroName}!`
+    switch(heroName){
+        case"Снегурочка":
+        case "Дед Мороз":
+            return `${heroName}! ${heroName}! ${heroName}!`
+        default:
+            return "Неизвестный персонаж: "+heroName;
+
+    }
+
 
 }
 
